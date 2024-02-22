@@ -152,3 +152,11 @@ def main():
                              <div style="background-color:lightgray;border-radius:12px;padding:8px 12px;margin-left:8px;"> \
                              {message}</div><div style="font-size:0.8rem;color:gray;">{time}</div></div>', unsafe_allow_html=True)
                     st.write("")
+
+            # gTTS 를 활용하여 음성 파일 생성 및 재생
+            TTS(response)
+        else:
+            st.session_state["check_reset"] = False
+
+if __name__=="__main__":
+    main()
